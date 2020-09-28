@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -8,15 +9,21 @@ public class User {
 
     public User(String name, Card card) {
         this.name = name;
+        this.cards = new ArrayList<>();
+        cards.add(card);
     }
 
     public void login(int pin) {}
 
     public void operation() {}
 
-    public void insertCard() {}
+    public void insertCard(ATM atm, Card card) {
+        atm.insertCard(card);
+    }
 
-    public void takeCard() {}
+    public void takeCard(ATM atm) {
+        atm.removeCard();
+    }
 
     public void takeMoney() {}
 
