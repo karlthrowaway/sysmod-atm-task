@@ -1,14 +1,13 @@
+import java.util.List;
+
 public class User {
 
     private String name;
-    private int PIN;
-    private float money;
-    private boolean hasCard;
+    private float cash;
+    private List<Card> cards;
 
-    public User(String name, int PIN, float money, boolean hasCard) {
+    public User(String name, Card card) {
         this.name = name;
-        this.money = money;
-        this.hasCard = hasCard;
     }
 
     public void login(int pin) {}
@@ -25,15 +24,11 @@ public class User {
         return name;
     }
 
-    public int getPIN() {
-        return PIN;
+    public float getCash() {
+        return cash;
     }
 
-    public float getMoney() {
-        return money;
-    }
-
-    public boolean isHasCard() {
-        return hasCard;
+    public List<Card> getCards() {
+        return cards;
     }
 }
